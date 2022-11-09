@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <title>Documentación HTML</title>
+  </head>
+
+<!--    Menu    -->
+
+<body>
+  <nav id="navbar">
+    <header class="title">Documentación HTML</header>
+    <ul>
+      <li>
+        <a class="nav-link" href="#Las_bases_del_desarrollo_Web"> Las bases del desarrollo Web </a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a class="nav-link" href="#HTML"> HTML </a>
+      </li>
+      <ul>
+      <li>
+        <a class="nav-link" href="#Anatomía_de_un_documento_HTML"> Anatomía de un documento HTML </a>
+      </li>
+      <li>
+        <a class="nav-link" href="#HTML_Semántico"> HTML Semántico </a>
+      </li>
+      <li>
+        <a class="nav-link" href="#Class_/_Id"> Class / Id </a>
+      </li>
+      <li>
+        <a class="nav-link" href="#DOM"> DOM </a>
+      </li>
+      <li>
+        <a class="nav-link" href="#HTML5"> HTML5 </a>
+      </li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li>
+        <a class="nav-link" href="#Etiquetas_HTML5"> Etiquetas HTML5 </a>
+      </li>
+      <ul>
+        <li>
+          <a class="nav-link" href="#Etiquetas_para_el_&lt;head&gt;"> Etiquetas para el &lt;head&gt; </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Title"> Title </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Meta"> Meta </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Link"> Link </a>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <a class="nav-link" href="#Etiquetas_para_el_&lt;body&gt;"> Etiquetas para el &lt;body&gt; </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Div"> Div </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Span"> Span </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Paragraph"> Paragraph </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Section"> Section </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Aside"> Aside </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Main"> Main </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Header_y_Footer"> Header y Footer </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Button"> Button </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Input"> Input </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Image"> Image </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Nav"> Nav </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Article"> Article </a>
+        </li>
+      </ul>
+    </ul>    
+  </nav>
+
+  <!--    Info    -->
+
+  <main id="main-doc">
+    <section class="main-section" id="Las_bases_del_desarrollo_Web">
+      <header>Las bases del desarrollo Web</header>
+      <p>El HTML, o Lenguaje de Marcado de Hipertextos, es el lenguaje utilizado
+        para crear documentos en la web . Proporciona significado (semántica) y
+        estructura al contenido de una página web. Por ejemplo, sus contenidos
+        podrían ser párrafos, una lista con viñetas o imágenes y tablas de datos.</p>
+      <p>"Hipertexto" se refiere a enlaces que conectan páginas web entre sí, ya sea
+        dentro de un único sitio web o entre distintos sitios web. Los enlaces son
+        un aspecto fundamental de la Web. Al cargar contenido en Internet y
+        vincularlo a páginas creadas por otras personas, se convierte en un
+        participante activo en la World Wide Web.</p>
+      <p>HTML utiliza "marcado" para anotar texto, imágenes y otro contenido para
+        mostrar en un navegador web. El marcado HTML incluye "elementos"
+        especiales. Un elemento HTML se separa de otro texto en un documento
+        mediante "etiquetas", que consisten en el nombre del elemento rodeado
+        por "<" y ">". El nombre de un elemento dentro de una etiqueta no
+        distingue entre mayúsculas y minúsculas. Es decir, se puede escribir en
+        mayúsculas, minúsculas o una mezcla.</p>
+    </section>
+    <section class="main-section" id="HTML">
+        <header>HTML</header>
+        <p>HTML (Hyper Text Markup Language) es un lenguaje markup que sirve para
+          describir la estructura de una página web, no el diseño, colores, etc., sino
+          sólo la estructura. Se basa en etiquetas. Por ejemplo, si queremos utilizar
+          un espacio donde haya algún tipo de contenido, como puede ser
+          simplemente texto, podríamos hacerlo así:</p>
+        <pre>
+          <code> 
+   &lt;div&gt; Este texto se mostraría en la página &lt;/div&gt; 
+          </code>
+        </pre>
+          <p>Dentro de las etiquetas puede haber otras etiquetas. Podríamos, por
+            ejemplo, tener dos párrafos dentro de un <code>&lt;div&gt;: </code></p>
+            <pre>&lt;div&gt;</pre>
+                  <pre>&lt;p&gt; Este es el primer párrafo &lt;/p&gt;</pre>
+                  <pre>&lt;p&gt; Este es el segundo párrafo &lt;/p&gt;</pre>
+            <pre>&lt;/div&gt;</pre>
+            <p>HTML es un lenguaje de marcado “hermano” de XML y XHTML. Todos
+              extienden de SGML (Standard Generalized Markup Language o lenguaje de
+              marcado generalizado estándar), pero cada uno está pensado para un
+              propósito diferente:</p>
+              <ul>
+                <li> XML : se utiliza para definir un conjunto de reglas para codificar
+                  documentos en un formato que sea comprensible tanto para
+                  humanos como para máquinas. Es una restricción de SGML que no
+                  permite etiquetas sin cerrar (deben estar cerradas con su
+                  correspondiente etiqueta de cierre o, en el caso de ser de autocierre,
+                  con la terminación “/>”), junto con otras restricciones más. Una de
+                  sus tantas aplicaciones es, por ejemplo, el intercambio de
+                  información entre sistemas.</li>
+                <li> HTML : restringe SGML definiendo una lista de etiquetas que se
+                  permite utilizar y sólo es adecuado para la representación de páginas
+                  web.</li>
+                <li> XHTML : XHTML restringe SGML con las etiquetas de HTML (con
+                  algunas exclusiones, como frameset y otras), agregando además, las
+                  restricciones de etiqueta y entidad de XML. Es, por lo tanto, un
+                  documento HTML con especificaciones adicionales para cumplir con
+                  el estándar XML.</li>
+              </ul>           
+    </section>
+    <section class="main-section" id="Anatomía_de_un_documento_HTML">
+        <header>Anatomía de un documento HTML</header>
+        <p>El siguiente código es sencillo, pero nos permitirá mostrar la estructura
+          básica de un documento HTML:</p>
+          <pre>&lt;div&gt;</pre>
+          <pre>&lt;!DOCTYPE html&gt;</pre>
+            <pre>&lt;html&gt;</pre>
+              <pre>&lt;head&gt;</pre>
+                <pre>&lt;meta charset= "iso-8859-1" &gt;</pre>
+                  <pre>&lt;title&gt; Página de prueba &lt;/title&gt;</pre>
+                    <pre>&lt;/head&gt;</pre>
+                      <pre>&lt;body&gt;</pre>
+                        <pre>&lt;img src= "images/autentia-icon.png" alt= "Mi página de prueba" &gt;</pre>
+                      <pre>&lt;/body&gt;</pre>
+              <pre>&lt;/html&gt;</pre>
+        <p>Aquí podemos encontrar los siguientes elementos:</p>
+        <ul>
+          <li> &lt;!DOCTYPE html&gt; : todo documento HTML debe comenzar con una
+            declaración Doctype. Su función es informar a los navegadores de
+            qué tipo de documento están procesando. En HTML 5 la declaración
+            es tan sencilla como la del ejemplo, pero en versiones anteriores esta era más complicada porque debía referir a un fichero DTD (Document Type Definition).
+            <pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</code></pre></li>
+          <li> &lt;html&gt; : es el elemento raíz del documento HTML y envuelve todo el
+            contenido de la página.</li>
+          <li> &lt;head&gt; : este elemento sirve como contenedor para todo aquello que
+            necesitemos incluir en nuestra página pero que no deseemos mostrar
+            a los usuarios. Toda esta información es conocida también como
+            metadatos (información sobre la información) y no se muestra a los
+            usuarios. Aquí es donde solemos definir el título de la página, los
+            íconos, el conjunto de caracteres, los estilos, scripts y más. Sólo
+            puede haber un elemento head por documento HTML.</li>
+          <li> &lt;body&gt; : este elemento envuelve a todo el contenido que deseamos
+            mostrar a los usuarios cuando visitan nuestra página como texto,
+            imágenes, audio, vídeo, etc. Sólo puede haber un elemento body por
+            documento HTML.</li>
+        </ul>
+    </section>
+    <section class="main-section" id="HTML_Semántico">
+      <header>HTML Semántico</header>
+      <p>El HTML semántico es aquél que introduce significado o la semántica a la
+        página, no sólo la presentación. Por ejemplo, la etiqueta &lt;b&gt; (negrita) o &lt;i&gt;
+        (cursiva) no son semánticas ya que definen cómo se debería mostrar el
+        texto, pero no aportan ningún significado.
+        También, si utilizamos un &lt;div&gt; , este no aporta nada de información ya que
+        podría contener cualquier cosa y mostrarse de cualquier forma,dependiendo del CSS. Sin embargo, si por ejemplo utilizamos &lt;p&gt;, estamos
+        indicando que lo que hay entre estas etiquetas será un párrafo. Las
+        personas saben lo que es un párrafo y los navegadores saben cómo
+        representarlo, por tanto, &lt;p&gt; sí es una etiqueta semántica pero &lt;div&gt; no lo
+        es.
+        También, por ejemplo, si utilizamos una etiqueta &lt;h1&gt; para envolver un
+        texto, estamos dándole significado, estamos indicando que ese es un título
+        principal en la página por tanto, también es una etiqueta semántica.</p>
+    </section>
+    <section class="main-section" id="Class_/_Id">
+      <header>Class / Id</header>
+      <p>Class e id son formas de identificar un elemento HTML. Class se utiliza
+        para referenciar el elemento desde un archivo CSS y poder darle un estilo.
+        El atributo global id define un identificador único, el cual no debe repetirse
+        en todo el documento y cuyo propósito es identificar el elemento para
+        poder hacer referencia al mismo, tanto en scripts como en hojas de estilo.
+        En el documento de CSS se pueden referenciar elementos de cualquiera de
+        estas dos formas, entre otras. La diferencia entre una clase y un id, es que
+        con id se puede identificar un sólo elemento, mientras que la clase se
+        puede usar para identificar más de uno. Así es como se utilizarían en el
+        HTML:</p>
+        <pre>&lt;p&gt; class= "class-example" &gt; Este es el ejemplo con clase &lt;/p&gt;</pre>
+        <pre>&lt;p&gt; id= "id-example" &gt; Este es el ejemplo con id &lt;/p&gt;</pre>
+    </section>
+    <section class="main-section" id="DOM">
+      <header>DOM</header>
+      <p>DOM (Document Object Model) es la interfaz que permite que lenguajes de
+        programación como JavaScript, modifiquen la estructura, el estilo o el
+        contenido de un sitio web.
+        El modelo nos ofrece una abstracción que nos p ermite tratar el documento
+        y sus elementos como si fuesen objetos . Para ello, se construye lo que se
+        conoce como un “Á rbol de DOM” en el que cada elemento del documento
+        es un nodo.</p>
+      <p>El DOM nos ofrece una multitud de propiedades y métodos para acceder a
+          los diferentes elementos y poder modificarlos. Algunos de los métodos más
+          utilizados son getElementById() o getElementsByClassName() . Ellos nos
+          permiten acceder a los elementos del DOM indicando su atributo id y class
+          respectivamente, similar al uso de selectores en HTML vistos en apartados
+          anteriores.
+          Esto nos permite consultar y modificar los atributos de cada elemento.
+          Algunos ejemplos de esto serían: extraer el texto introducido en una caja
+          de texto o cambiar el estado de un elemento, deshabilitando un botón.
+          Esta capacidad de manipular el DOM, nos ofrece muchas posibilidades
+          como crear aplicaciones personalizadas que cambien su diseño sin
+          necesidad de actualizar la página.</p>
+    </section>
+    <section class="main-section" id="HTML5">
+      <header>HTML5</header>
+      <p>HTML5 es la última evolución del estándar que define HTML.
+        El término representa dos conceptos diferentes. Es una nueva
+        versión del lenguaje HTML, con nuevos elementos, atributos y
+        comportamientos y un conjunto más amplio de tecnologías
+        que permiten la creación de sitios web y aplicaciones más diversas y
+        potentes.</p>
+    </section>
+    <section class="main-section" id="Etiquetas_HTML5">
+      <header>Etiquetas HTML5</header>
+      <p>Estas son algunas de las etiquetas HTML5 más utilizadas:</p>
+    </section>
+    <section class="main-section" id="Etiquetas_para_el_&lt;head&gt;">
+      <header>Etiquetas para el &lt;head&gt;</header>  
+    </section>
+    <section class="main-section" id="Title">
+      <header>Title</header>
+      <p>Esta etiqueta sirve para definir el título del documento. El título debe ser
+        solo de texto y se muestra en la barra de título del navegador o en la
+        pestaña de la página. Esta etiqueta es requerida en todos los documentos
+        HTML.
+        El contenido del título de una página es muy importante para la
+        optimización de motores de búsqueda (SEO). Los algoritmos de los motores
+        de búsqueda utilizan el título de la página para decidir el orden cuando se
+        enumeran las páginas en los resultados de búsqueda.</p>
+        <pre><code> 
+          &lt;head&gt;
+          &lt;title&gt; Este es el título de la página &lt;/title&gt;
+          &lt;/head&gt; </code></pre>
+    </section>
+    <section class="main-section" id="Meta">
+      <header>Meta</header>
+      <p>Define información (metadata) sobre un documento HTML como el autor, la
+        descripción de la página, la codificación de los caracteres, la configuración
+        del viewport, etc.
+        Algunos valores y/o propiedades más usadas y conocidas dentro de esta
+        etiqueta son las siguientes:</p>
+      <p>● Description : define una breve descripción de nuestra web y es la que
+        usan los motores de búsqueda.</p>
+        <pre><code>&lt;meta name= "description" content= "HTML (HyperText Markup Language)
+          is the most basic building block of the Web. It defines the
+          meaning and structure of web content. Other technologies besides
+          HTML are generally used to describe a web page." &gt;</code></pre>
+      <p>● Keywords : define palabras clave sobre la página web.</p>
+          <pre><code>&lt;meta name = "keywords" content = "HTML, CSS" &gt;</code></pre>
+      <p>● Viewport : define el área visible de un usuario en una web.
+        device-width adapta el ancho de la página al dispositivo, aunque
+        también se podría asignar un tamaño fijo en píxeles (no
+        recomendado). También tiene propiedades para limitar el zoom que
+        puede hacer el usuario.</p>
+        <pre><code>&lt;meta name = "viewport" content = "width=device-width,
+          initial-scale=1.0" &gt;</code></pre>
+      <p>● Charset : define la codificación de los caracteres del documento.</p>
+      <pre><code>&lt;meta charset = "utf-8" &gt;</code></pre>
+    </section>
+    <section class="main-section" id="Link">
+      <header>Link</header>
+      <p>Define la relación entre el documento actual y un recurso externo. La
+        relación que tienen ambos se define con la propiedad rel (relationship),
+        pero se enlazan a través de la propiedad href. La propiedad rel es
+        obligatoria y sus valores más usados son stylesheet e icon, aunque tiene
+        muchos más.
+        El uso más común de esta etiqueta es para enlazar hojas de estilos.</p>
+        <pre><code>&lt;link href = "main.css" rel = "stylesheet" &gt;</code></pre>
+    </section>
+    <section class="main-section" id="Etiquetas_para_el_&lt;body&gt;">
+      <header>Etiquetas para el &lt;body&gt;</header>
+    </section>
+    <section class="main-section" id="Div">
+      <header>Div</header>
+      <p>Estas etiquetas se utilizan a modo de contenedores ya sea para texto, para
+        otras etiquetas o cualquier otro tipo de contenido. Se utilizan de la
+        siguiente manera:</p>
+      <pre><code>&lt;div&gt; Este es un contenido dentro del div &lt;/div&gt;</code></pre>
+    </section>
+    <section class="main-section" id="Span">
+      <header>Span</header>
+      <p>El span es un contenedor inline, es decir, se utiliza para envolver parte de
+        un texto o un documento. Esto puede ser para darles a esos elementos un
+        estilo distinto (aplicando una clase o id) o porque comparten un atributo,
+        por ejemplo, lang (lenguaje). Es básicamente como un div, con la diferencia
+        de que div es un elemento a nivel de bloque, mientras que span es inline.
+        Este es un ejemplo de cómo usarlo:</p>
+        <pre><code>&lt;p&gt;
+          En esa empresa hay &lt;span class= "workers-number" &gt; 25 &lt;/span&gt;
+          trabajadores
+          &lt;/p&gt;</code></pre>
+    </section>
+    <section class="main-section" id="Paragraph">
+      <header>Paragraph</header>
+      <p>Esta etiqueta se utiliza a la hora de mostrar un párrafo y este sería un
+        ejemplo de uso:</p>
+      <pre><code>&lt;p&gt; Este es un párrafo &lt;/p&gt;</code></pre>
+    </section>
+    <section class="main-section" id="Section">
+      <header>Section</header>
+      <p>Su uso es bastante directo: definir una sección. Un ejemplo de una sección
+        podría ser este:</p>
+        <pre><code>&lt;section&gt;
+          &lt;h2&gt; Este sería el título de la sección &lt;/h2&gt;
+          &lt;p&gt; Este es un párrafo &lt;/p&gt;
+          &lt;/section&gt;</code></pre>
+    </section>
+    <section class="main-section" id="Aside">
+      <header>Aside</header>
+      <p>Esta etiqueta define cierto contenido aparte del contenido en el que se
+        coloca. Este contenido aparte debería estar indirectamente relacionado con
+        el contenido que le rodea:</p>
+        <pre><code>&lt;section&gt;
+          &lt;p&gt; El verano pasado fuimos a una playa increíble en Cádiz. &lt;/p&gt;
+          &lt;aside&gt;
+          &lt;h2&gt; Playa de Cortadura &lt;/h2&gt;
+          &lt;p&gt; Un texto explicativo sobre la playa &lt;/p&gt;
+          &lt;/aside&gt;
+          &lt;p&gt; Aparte de la playa, fuimos a cenar a unos cuantos sitios, a
+          las ferias.... &lt;/p&gt;
+          &lt;/section&gt;</code></pre>
+    </section>
+    <section class="main-section" id="Main">
+      <header>Main</header>
+      <p>Con esta etiqueta se define el contenido principal del documento o página.
+        Lo que contenga esta etiqueta debe ser único en el documento y no tener
+        elementos que se repitan en otros, como puede ser una barra de
+        navegación, un menú lateral, etc.</p>
+        <pre><code>&lt;main&gt;
+          Aquí iría el contenido
+          &lt;/main&gt;</code></pre>
+    </section>
+    <section class="main-section" id="Header_y_Footer">
+      <header>Header y Footer</header>
+      <p>Estas etiquetas, como su propio nombre indica, se usan para definir la
+        cabecera y pie de de página respectivamente:</p>
+      <pre><code>&lt;header&gt; Esta es una cabecera &lt;/header&gt;
+        &lt;footer&gt; Esto es un pie de página &lt;/footer&gt;</code></pre>
+    </section>
+    <section class="main-section" id="Button">
+      <header>Button</header>
+      <p>Esta etiqueta se utiliza para crear un botón en el que podemos escuchar al
+        evento del click y decirle a qué función debe llamar en ese caso:</p>
+      <pre><code>&lt;button onclick= "handleOnClick()" &gt; Click me &lt;/button&gt;</code></pre>
+    </section>
+    <section class="main-section" id="Input">
+      <header>Input</header>
+      <p>El input se usa para crear un campo en el que un usuario pueda ingresar
+        información, como por ejemplo un texto. Entre las muchas propiedades que
+        tiene el input, se puede especificar el tipo de input que es con type (texto,
+        número, fecha…) o definir un texto que se mostrará si el input está en
+        blanco con placeholder. Input es un elemento de tipo Void , por lo que este
+        elemento no debe cerrarse con otra etiqueta, como en otros casos.
+        Este sería un ejemplo de un input en el que sólo se pueden introducir
+        números y con un placeholder:</p>
+      <pre><code>&lt;input type= "number" placeholder= "Introduzca un número" &gt;</code></pre>
+    </section>
+    <section class="main-section" id="Image">
+      <header>Image</header>
+      <p>Este sería un ejemplo de cómo representar una imagen:</p>
+      <pre><code>&lt;img src= "route-to-image.jpg" alt= "Texto alternativo" &gt;</code></pre>
+    </section>
+    <section class="main-section" id="Nav">
+      <header>Nav</header>
+      <p>Esta etiqueta se usa para definir una serie de links navegables. No todos
+        los links de una página web deben estar en un nav pero si hay una serie de
+        links juntos, deberían contenerse dentro de un nav:</p>
+      <pre><code>&lt;nav&gt;
+        &lt;a href= "link.com" &gt; Link 1  &lt;/a&gt;|
+        &lt;a href= "some-link.com" &gt; Link 2  &lt;/a&gt;|
+        &lt;a href= "another-link.com" &gt; Otro link  &lt;/a&gt;|
+        &lt;a href= "yet-another-link.com" &gt; Random Link &lt;/a&gt;
+        &lt;/nav&gt;</code></pre>
+    </section>
+    <section class="main-section" id="Article">
+      <header>Article</header>
+      <p>Esta etiqueta específica contenido independiente y auto-contenido. Este
+        contenido debería tener sentido por su cuenta y poder ser distribuido de
+        forma independiente al resto de la página. Las etiquetas article no hacen
+        que su contenido se renderice de forma distinta, sino que aporta
+        meramente un significado contextual. Un pequeño ejemplo puede ser el
+        siguiente:</p>
+      <pre><code>&lt;article&gt;
+        &lt;h2&gt; Algún título &lt;/h2&gt;
+        &lt;p&gt; Un texto cualquiera &lt;/p&gt;
+        &lt;article&gt;</code></pre>
+    </section>
+  </main>
+</body>
+</html>

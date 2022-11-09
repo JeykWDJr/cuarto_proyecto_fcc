@@ -1,0 +1,173 @@
+:root {
+    --fondo-nav: #caccd1;
+    --color-text: #52565e;
+    --fondo-pre: #f1f0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    max-height: 100vh;
+    width: 30%;
+    background-color: var(--fondo-nav);
+    line-height: 55px;
+    overflow-y: scroll;
+    border-right: 5px #caccd1 solid;
+}
+
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2rem;
+    background-color: var(--fondo-nav);
+    width: 100%;
+}
+
+
+#navbar li {
+    border-top: 2px solid;
+}
+
+
+#navbar .nav-link {
+    margin: 0 0 0 2rem;
+}
+
+
+#navbar header {
+    margin: 1.5rem 1.5rem;
+    align-self: center;
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+}
+
+
+#main-doc {
+    display: inline-block;
+    width: 75%;
+    max-width: 78%;
+    margin: 2rem 2rem 2rem 3rem;
+    max-height: 91vh;
+    overflow: auto;
+}
+
+
+header {
+    margin: 1rem 0;
+    font-size: 1.8em;
+    font-weight: 400;
+}
+
+
+p {
+    color: var(--color-text);
+    margin: 1rem 2rem;
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+pre {
+    margin: 0 4rem;
+    background-color: var(--fondo-pre);
+}
+
+#main-doc li {
+    color: var(--color-text);
+    line-height: 2;
+    margin: 1rem 5rem;
+}
+
+
+
+
+   /*   Media     */
+
+
+@media screen and (max-width: 1361px) {
+
+
+  #navbar { 
+        width: 30%;
+        }
+
+  #navbar header {
+  font-size: 1.8vw;
+  }
+
+  .nav-link {
+    font-size: 1.3vw;
+  }
+
+  header {
+    font-size: 2.1vw;
+  }
+
+  p, pre, #main-doc li {
+    font-size: 1.3vw;
+  }
+
+  #main-doc header {
+    font-size: 2vw;
+    }
+  
+}
+
+
+@media screen and (max-width: 978px) {
+
+    #navbar { 
+        width: 30%;
+        }
+
+    #navbar header {
+        font-size: 1.8vw;
+        margin: 20px 0;
+        }
+      
+    .nav-link {
+        font-size: 1.3vw;
+        }
+      
+    header {
+        font-size: 1.8vw;
+        }
+
+    #main-doc {
+        margin: 0 50px;
+    }
+      
+    p {
+        font-size: 1.6vw;
+        margin: 5px 10px;
+        }
+      
+    #main-doc header {
+        font-size: 1.8vw;
+          }
+
+    #main-doc pre {
+        font-size: 1.4vw;
+        margin: 0 12px;
+    }
+
+    #main-doc li {
+        font-size: 1.4vw;
+        margin: 0 12px;
+    } 
+}
